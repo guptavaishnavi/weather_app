@@ -7,13 +7,13 @@ const weather = require('../functions/weather.js');
 const path = require('path');
 const publicPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
-const partialPath = path.join(__dirname, '../templates/partials')
+//const partialPath = path.join(__dirname, '../templates/partials')
 
 //static path inside express
 app.use(express.static(publicPath))
 app.set('view engine', 'hbs')
 app.set('views', viewsPath)
-hbs.registerPartials(partialPath)
+//hbs.registerPartials(partialPath)
 
 app.get('', (req, res)=>{
    res.render('index', {
